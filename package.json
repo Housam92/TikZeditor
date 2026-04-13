@@ -1,0 +1,44 @@
+{
+  "name": "tikz-editor",
+  "version": "1.0.0",
+  "main": "main.js",
+  "description": "Ein einfacher TikZ-Editor mit Electron und Monaco",
+  "author": "praktikum25",
+  "license": "MIT",
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder"
+  },
+  "keywords": [
+    "electron",
+    "tikz",
+    "editor"
+  ],
+  "devDependencies": {
+    "electron": "^37.6.0",
+    "electron-builder": "^26.0.12"
+  },
+  "dependencies": {
+    "@monaco-editor/loader": "^1.5.0",
+    "monaco-editor": "^0.52.2"
+  },
+  "build": {
+    "appId": "com.praktikum25.tikzeditor",
+    "productName": "TikZ Editor",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "**/*"
+    ],
+    "win": {
+      "target": "nsis"
+    },
+    "mac": {
+      "target": "dmg"
+    },
+    "linux": {
+      "target": "AppImage"
+    }
+  }
+}
